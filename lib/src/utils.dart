@@ -214,9 +214,9 @@ extension ColorExtension1 on String {
 // Extension from Color
 extension ColorExtension2 on Color {
   String toHexString(
-          {bool includeHashSign = false,
+          {bool includeHashSign = true,
           bool enableAlpha = true,
           bool toUpperCase = true}) =>
       colorToHex(this,
-          includeHashSign: false, enableAlpha: true, toUpperCase: true);
+          includeHashSign: true, enableAlpha: true, toUpperCase: true);
 }
