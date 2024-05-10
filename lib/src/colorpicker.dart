@@ -244,8 +244,8 @@ class _ColorPickerState extends State<ColorPicker> {
 
   void onColorChanging(HSVColor color) {
     // Update text in `hexInputController` if provided.
-    widget.hexInputController?.text =
-        colorToHex(color.toColor(), enableAlpha: widget.enableAlpha);
+    widget.hexInputController?.text = colorToHex(color.toColor(),
+        enableAlpha: widget.enableAlpha, includeHashSign: true);
     setState(() => currentHsvColor = color);
     widget.onColorChanged(currentHsvColor.toColor());
     if (widget.onHsvColorChanged != null)
