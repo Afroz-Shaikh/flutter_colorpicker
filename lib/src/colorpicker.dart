@@ -179,11 +179,10 @@ class _ColorPickerState extends State<ColorPicker> {
     // If there's no initial text in `hexInputController`,
     if (widget.hexInputController?.text.isEmpty == true) {
       // set it to the current's color HEX value.
-      widget.hexInputController?.text = colorToHex(
-        currentHsvColor.toColor(),
-        enableAlpha: widget.enableAlpha,
-        includeHashSign: true,
-      );
+      widget.hexInputController?.text = colorToHex(currentHsvColor.toColor(),
+          enableAlpha: widget.enableAlpha,
+          includeHashSign: true,
+          toUpperCase: true);
     }
     // Listen to the text input, If there is an `hexInputController` provided.
     widget.hexInputController?.addListener(colorPickerTextInputListener);
